@@ -13,16 +13,16 @@ export class coffeeCommand implements aSpectrumCommand {
         let username = message.member.displayname;
 
         let messages = [
-            "Certainly, would you like some suggar :coffe: ?",
-            "On my way :coffe:, black as usual I assume ?",
-            "I have it ready just the way you like. :coffe:",
-            "I know you would ask and took the liberty of making some as you were away. :coffe:",
-            "The finest grain I know of, :coffe: made especially for you "+username+".",
+            "Certainly, would you like some suggar :coffee: ?",
+            "On my way :coffee:, black as usual I assume ?",
+            "I have it ready just the way you like. :coffee:",
+            "I know you would ask and took the liberty of making some as you were away. :coffee:",
+            "The finest grain I know of, :coffee: made especially for you "+username+".",
             "Here you go :coffee:",
             "One hot :coffee: for you, dear "+username+".",
             ":coffee: Do call me back and i'll bring a second cup.",
             "Right on time as usual. You'll find biscuits on the platter. :coffee:",
-            "Ask and you shall receive my dear "+username+". :coffe:",
+            "Ask and you shall receive my dear "+username+". :coffee:",
         ];
 
         lobby.sendPlainTextMessage("[BOT] "+pickRandom(messages));
