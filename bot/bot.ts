@@ -1,6 +1,7 @@
 import { Spectrum } from '../spectrum-bot/';
 import { config } from './config/config';
 import { JeevesCommands } from './commands/_.commands';
+import { APIServer } from './server/_.server';
 
 var bot = new Spectrum();
 
@@ -20,7 +21,8 @@ bot.initAsUser(config.username, config.password).then( (isConnected) => {
         //concierge.subscribe();
 
         console.log("euh");
-        var commands = new JeevesCommands();        
+        var commands = new JeevesCommands(); 
+        var server = new APIServer();       
     });
 });
     
