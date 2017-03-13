@@ -5,9 +5,12 @@ import * as Datastore from 'nedb';
 import { aSpectrumCommand } from '../../spectrum-bot/src/Spectrum/interfaces/command.interface';
 import { removeKillCommand } from './kill/removeKill';
 import { topKillsCommand } from './kill/topKills';
+import { coffeeCommand } from './coffee/coffee';
+import { StatCoffeeCommand } from './coffee/statCoffee';
 
 export class JeevesCommands {
-    public commands:aSpectrumCommand[] = [new isUpCommand(), new addKillCommand(), new removeKillCommand(), new topKillsCommand()];
+    public commands:aSpectrumCommand[] = [new isUpCommand(), new addKillCommand(), new removeKillCommand(), new topKillsCommand(),
+    new coffeeCommand(), new StatCoffeeCommand()];
     private scCommands:SpectrumCommands = new SpectrumCommands();
     public constructor() {
         console.log("constructing");
@@ -20,3 +23,4 @@ export class JeevesCommands {
 }
 
 export let DbKills:Datastore = new Datastore({ filename: './bot/db/kills.db', autoload: true });
+export let DbStats:Datastore = new Datastore({ filename: './bot/db/stats.db', autoload: true });
