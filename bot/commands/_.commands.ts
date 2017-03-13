@@ -7,10 +7,11 @@ import { removeKillCommand } from './kill/removeKill';
 import { topKillsCommand } from './kill/topKills';
 import { coffeeCommand } from './coffee/coffee';
 import { StatCoffeeCommand } from './coffee/statCoffee';
+import { HelpCommand } from './help/help';
 
 export class JeevesCommands {
     public commands:aSpectrumCommand[] = [new isUpCommand(), new addKillCommand(), new removeKillCommand(), new topKillsCommand(),
-    new coffeeCommand(), new StatCoffeeCommand()];
+    new coffeeCommand(), new StatCoffeeCommand(), new HelpCommand()];
     private scCommands:SpectrumCommands = new SpectrumCommands();
     public constructor() {
         console.log("constructing");

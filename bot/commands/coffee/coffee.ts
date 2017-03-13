@@ -25,7 +25,7 @@ export class coffeeCommand implements aSpectrumCommand {
             "Ask and you shall receive my dear "+username+".",
         ];
 
-        lobby.sendPlainTextMessage(pickRandom(messages));
+        lobby.sendPlainTextMessage("[BOT] "+pickRandom(messages));
         DbStats.update({ stat: 'coffeeServed' }, { $inc: {count : 1 } }, { upsert: true }, () => {
             console.log("[STAT] Coffee++");
         });
