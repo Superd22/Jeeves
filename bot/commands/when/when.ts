@@ -9,7 +9,7 @@ export class WhenIsCommand implements aSpectrumCommand {
     public shortCode:string = "when (.*)$";
     public callback = (message?:receivedTextMessage, lobby?:SpectrumLobby, matchs?:Array<any>) => {
 
-        let m = [':soon:',':tm:',':soon: :tm:', 'I just checked, and it\'s soon.'];
+        let m = [':soon:','Soon :tm:',':soon: :tm:', 'I just checked, and it\'s soon :tm: .'];
 
 
         lobby.sendPlainTextMessage("[BOT] "+pickRandom(m));
