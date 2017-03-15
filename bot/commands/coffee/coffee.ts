@@ -13,7 +13,7 @@ export class coffeeCommand implements aSpectrumCommand {
         let username = message.member.displayname;
 
         let messages = [
-            "Certainly, would you like some suggar :coffee: ?",
+            "Certainly, would you like some sugar :coffee: ?",
             "On my way :coffee:, black as usual I assume ?",
             "I have it ready just the way you like. :coffee:",
             "I know you would ask and took the liberty of making some as you were away. :coffee:",
