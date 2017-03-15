@@ -10,10 +10,11 @@ import { StatCoffeeCommand } from './coffee/statCoffee';
 import { HelpCommand } from './help/help';
 import { TeaCommand } from './tea/tea';
 import { BeerCommand } from './beer/beer';
+import { WhenIsCommand } from './when/when';
 
 export class JeevesCommands {
     public commands:aSpectrumCommand[] = [new isUpCommand(), new addKillCommand(), new removeKillCommand(), new topKillsCommand(),
-    new coffeeCommand(), new StatCoffeeCommand(), new HelpCommand(), new TeaCommand(), new BeerCommand()];
+    new coffeeCommand(), new StatCoffeeCommand(), new HelpCommand(), new TeaCommand(), new BeerCommand(), new WhenIsCommand()];
     private scCommands:SpectrumCommands = new SpectrumCommands();
     public constructor() {
         console.log("constructing");

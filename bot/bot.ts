@@ -11,10 +11,9 @@ bot.initAsUser(config.username, config.password).then( (isConnected) => {
 
     // Wait for internal state to be ready
     state.whenReady().then(() => {
-        console.log("readyyy");
         var commands = new JeevesCommands(); 
         var server = new APIServer();     
-        
+
         // Get a community
         let global = state.getCommunityByName("Star Citizen");
         // Get a lobby in that community
@@ -22,10 +21,6 @@ bot.initAsUser(config.username, config.password).then( (isConnected) => {
 
         // Get events from Lobby
         concierge.subscribe();
-
-	console.log(concierge);
-
-        console.log("euh");  
     });
 });
     
