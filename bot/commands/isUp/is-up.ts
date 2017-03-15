@@ -7,8 +7,8 @@ export class isUpCommand implements aSpectrumCommand {
     public listenerID;
     public shortCode:string = "isup";
     public callback = (message?:receivedTextMessage, lobby?:SpectrumLobby, matchs?:Array<any>) => {
-        lobby.sendPlainTextMessage("[BOT] Yes, I am there. How can i be of service ?");
+        lobby.sendPlainTextMessage("[BOT] Yes, I am there. How may I be of service?");
     };
     public name = "Is up ?";
-    public manual = "Displays wheter or not the bot is currently up and running.";
+    public manual = "Displays whether or not the bot is currently up and running.";
 }
