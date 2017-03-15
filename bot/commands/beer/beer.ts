@@ -21,6 +21,9 @@ export class BeerCommand implements aSpectrumCommand {
             "Maybe you should consider cutting on the beer dear "+username+". But alas, here you go :beer:",
             "I guess one more won't do much more damage :beer:",
             "Ask and you shall receive my dear "+username+". :beers:",
+            "This one's on the house! :beer:",
+            "How about this instead? :sake:",
+            "Cheers! :beers:",
         ];
 
         lobby.sendPlainTextMessage("[BOT] "+pickRandom(messages));
