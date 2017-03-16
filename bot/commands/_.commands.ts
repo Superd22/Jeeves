@@ -5,16 +5,19 @@ import * as Datastore from 'nedb';
 import { aSpectrumCommand } from '../../spectrum-bot/src/Spectrum/interfaces/command.interface';
 import { removeKillCommand } from './kill/removeKill';
 import { topKillsCommand } from './kill/topKills';
-import { coffeeCommand } from './coffee/coffee';
-import { StatCoffeeCommand } from './coffee/statCoffee';
+import { coffeeCommand } from './giftables/coffee';
+import { StatCoffeeCommand } from './giftables/statCoffee';
 import { HelpCommand } from './help/help';
-import { TeaCommand } from './tea/tea';
-import { BeerCommand } from './beer/beer';
+import { TeaCommand } from './giftables/tea';
+import { BeerCommand } from './giftables/beer';
 import { WhenIsCommand } from './when/when';
+import { TopHatCommand } from './giftables/topHat';
+import { WineCommand } from './giftables/wine';
 
 export class JeevesCommands {
     public commands:aSpectrumCommand[] = [new isUpCommand(), new addKillCommand(), new removeKillCommand(), new topKillsCommand(),
-    new coffeeCommand(), new StatCoffeeCommand(), new HelpCommand(), new TeaCommand(), new BeerCommand(), new WhenIsCommand()];
+    new coffeeCommand(), new StatCoffeeCommand(), new HelpCommand(), new TeaCommand(), new BeerCommand(), new WhenIsCommand(), new WineCommand(),
+    new TopHatCommand()];
     private scCommands:SpectrumCommands = new SpectrumCommands();
     public constructor() {
         console.log("constructing");
