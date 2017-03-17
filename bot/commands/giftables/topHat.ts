@@ -19,7 +19,7 @@ export class TopHatCommand implements aSpectrumCommand {
         let messages = [
             "Did you misplace your top hat again "+username+" ? :tophat:",
             "One should always carry his couvre-chef on oneself. :tophat: don't misplace that one  "+username,
-            "We do not have an infinite supplies of those "+originalUser+"... "+( hasT ? "I expect you will be careful with that :tophat: "+username : "."+" Do take care of it..."),
+            "We do not have an infinite supplies of those "+originalUser+"... "+( hasT ? "I expect you will be careful with that :tophat: "+username : "."+":tophat: Do take care of it..."),
             "The finest gift "+ (hasT ? "a Gentleman like "+originalUser+" could offer you " : "you could ask for ")+username+" :tophat: .",
         ];
 
