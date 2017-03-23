@@ -21,7 +21,9 @@ export class TopHatCommand implements aSpectrumCommand {
             "One should always carry his couvre-chef on oneself. :tophat: don't misplace that one  "+username,
             "We do not have an infinite supplies of those "+originalUser+"... "+( hasT ? "I expect you will be careful with that :tophat: "+username : "."+" Do take care of it..."),
             "The finest gift "+ (hasT ? "a Gentleman like "+originalUser+" could offer you " : "you could ask for ")+username+" :tophat: .",
+            "" + (originalUser.toLowerCase() == "sharperifle" ? "I'll give it to you "+username+"... But you're still not classy enough." : "*gives a tophat to "+username+"*"),
         ];
+
 
         lobby.sendPlainTextMessage("[BOT] "+pickRandom(messages));
         GiftablesHelper.updateStatsForGiftable("hat",originalUser,username);

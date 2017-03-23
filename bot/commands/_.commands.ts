@@ -1,3 +1,4 @@
+import { PizzaCommand } from './giftables/pizza';
 import { isUpCommand } from './isUp/is-up';
 import { addKillCommand } from './kill/addKill';
 import { SpectrumCommands } from '../../spectrum-bot/src/Spectrum/services/commands.service';
@@ -17,7 +18,7 @@ import { WineCommand } from './giftables/wine';
 export class JeevesCommands {
     public commands:aSpectrumCommand[] = [new isUpCommand(), new addKillCommand(), new removeKillCommand(), new topKillsCommand(),
     new coffeeCommand(), new StatCoffeeCommand(), new HelpCommand(), new TeaCommand(), new BeerCommand(), new WhenIsCommand(), new WineCommand(),
-    new TopHatCommand()];
+    new TopHatCommand(), new PizzaCommand()];
     private scCommands:SpectrumCommands = new SpectrumCommands();
     public constructor() {
         console.log("constructing");
