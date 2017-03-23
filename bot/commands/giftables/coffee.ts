@@ -27,10 +27,8 @@ export class coffeeCommand implements aSpectrumCommand {
         ];
 
         lobby.sendPlainTextMessage("[BOT] "+pickRandom(messages));
-        DbStats.update({ stat: 'coffeeServed' }, { $inc: {count : 1 } }, { upsert: true }, () => {
-            console.log("[STAT] Coffee++");
-        });
 
+        GiftablesHelper.updateStatsForGiftable("coffee",originalUser,username);
     };
     public name = "Serve Coffee";
     public manual = "Serves coffee.";

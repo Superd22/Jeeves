@@ -6,7 +6,7 @@ import { DbKills } from '../_.commands';
 
 export class countKillCommand implements aSpectrumCommand {
     public listenerID;
-    public shortCode = "kill count @(.*)$";
+    public shortCode = "kill count @([^ ]*)$";
     public callback = (message?:receivedTextMessage, lobby?:SpectrumLobby, matchs?:Array<any>) => {
         if(!matchs[1]) matchs[1] = message.member.nickname.toLowerCase();
 

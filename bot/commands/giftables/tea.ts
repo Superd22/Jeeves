@@ -27,10 +27,7 @@ export class TeaCommand implements aSpectrumCommand {
         ];
 
         lobby.sendPlainTextMessage("[BOT] "+pickRandom(messages));
-        DbStats.update({ stat: 'teaServed' }, { $inc: {count : 1 } }, { upsert: true }, () => {
-            console.log("[STAT] Tea++");
-        });
-
+        GiftablesHelper.updateStatsForGiftable("tea",originalUser,username);
     };
     public name = "Serve tea";
     public manual = "Serves tea.";

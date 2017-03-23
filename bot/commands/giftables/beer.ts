@@ -28,9 +28,7 @@ export class BeerCommand implements aSpectrumCommand {
 
         lobby.sendPlainTextMessage("[BOT] "+pickRandom(messages));
 
-        DbStats.update({ stat: 'beerServed' }, { $inc: {count : 1 } }, { upsert: true }, () => {
-            console.log("[STAT] Beer++");
-        });
+        GiftablesHelper.updateStatsForGiftable("beer",originalUser,username);
 
     };
     public name = "Serve beer";

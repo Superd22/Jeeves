@@ -24,9 +24,7 @@ export class WineCommand implements aSpectrumCommand {
         ];
 
         lobby.sendPlainTextMessage("[BOT] "+pickRandom(messages));
-        DbStats.update({ stat: 'wineServed' }, { $inc: {count : 1 } }, { upsert: true }, () => {
-            console.log("[STAT] Wine++");
-        });
+        GiftablesHelper.updateStatsForGiftable("wine",originalUser,username);
 
     };
     public name = "Serve wine";

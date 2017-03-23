@@ -1,3 +1,4 @@
+import { DbStats } from './../_.commands';
 import { receivedTextMessage } from '../../../spectrum-bot/src/Spectrum/interfaces/receivedTextMessage.interface';
 export class GiftablesHelper {
     /** The regex for optional target for a giftable */
@@ -39,4 +40,23 @@ export class GiftablesHelper {
         if(typeof rd === typeof true) return rd ? withCourtesy : withoutCourtesy;
         else return GiftablesHelper.hasTarget(rd) ? withCourtesy : withoutCourtesy;
     }
+
+    /**
+     * Helper function to update stats for a given giftable and the guy who asked for it & received it
+     * @param giftable the name of the giftable
+     * @param originalUser the name of the user who asked for
+     * @param username the name of the user who got the coffee
+     */
+    public static updateStatsForGiftable(giftable:string, originalUser:string, username:string) {
+        DbStats.update({ stat: giftable+'Served' }, { $inc: {count : 1 } }, { upsert: true }, () => {
+            console.log("[STAT] "+giftable+"++");
+        });
+
+        if(username != originalUser)
+        DbStats.update({ stat: 'gifted_'+giftable+'_'+originalUser }, { $inc: {count : 1 } }, { upsert: true }, () => { });
+
+        DbStats.update({ stat: 'received_'+giftable+'_'+username }, { $inc: {count : 1 } }, { upsert: true }, () => { });
+    }
+
+
 }

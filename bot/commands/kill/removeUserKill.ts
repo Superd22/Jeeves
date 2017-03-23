@@ -6,12 +6,12 @@ import { DbKills } from '../_.commands';
 
 export class removeUserKillCommand implements aSpectrumCommand {
     public listenerID;
-    public shortCode = "kill count @(.*)$";
+    public shortCode = "kill count @([^ ]*)";
     public callback = (message?:receivedTextMessage, lobby?:SpectrumLobby, matchs?:Array<any>) => {
         if(!matchs[1]) matchs[1] = message.member.nickname.toLowerCase();
-        
+
         // Trim spaces in handle name
-        matchs[1] = matchs[1].replace(" ", "");
+        matchs[1] = matchs[1].replace(" ", "").trim();
 
         DbKills.count({handle: matchs[1]}, (err, count) => {
             lobby.sendPlainTextMessage("[BOT] @"+matchs[1]+" has "+count+ " confirmed kills.");

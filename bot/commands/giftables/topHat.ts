@@ -24,9 +24,7 @@ export class TopHatCommand implements aSpectrumCommand {
         ];
 
         lobby.sendPlainTextMessage("[BOT] "+pickRandom(messages));
-        DbStats.update({ stat: 'hatServed' }, { $inc: {count : 1 } }, { upsert: true }, () => {
-            console.log("[STAT] Hat++");
-        });
+        GiftablesHelper.updateStatsForGiftable("hat",originalUser,username);
 
     };
     public name = "Serve a top hat";
