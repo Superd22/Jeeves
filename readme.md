@@ -3,7 +3,8 @@ Jeeves is butler bot for #concierge Spectrum's channel.
 
 # Commands list
 
-*every commands must start with !jeeves*
+**every commands must start with !jeeves**
+
 ex: `kill add @Haverson` in this guide will be `!jeeves kill add @Haverson` on Spectrum
 
 ## Chat Kills
@@ -24,7 +25,7 @@ see : http://whokilledconcierge.com/
 
 
 ## Giftables
-You can ask Jeeves to give you certain basic 
+You can ask Jeeves to give you certain basics
 
 *note: in every case here, the (@handle) is optional, if supplied Jeeves will gift to @Handle from you.
 If not supplied, jeeves will gift to you.* 
@@ -49,8 +50,7 @@ If not supplied, jeeves will gift to you.*
 - `isup`
     Displays whether or not the bot is up and running.
 - `when (question|release date)`
-    *Where (question|release date) is a desired release date.* Will use machine learning on the spectrums/forums/reddit to try and come up with a best estimate as ton when
-    required featured will release.
+    *Where (question|release date) is a desired release date.* Will use machine learning on the spectrums/forums/reddit to try and come up with a best estimate as to when required featured will release.
     
     Example: `!jeeves when will 3.0 be out ?` will compute most likely release date.
 - `help`
