@@ -25,7 +25,7 @@ see : http://whokilledconcierge.com/
 
 
 ## Giftables
-You can ask Jeeves to give you certain basics
+You can ask Jeeves to give you certain very basic amenities
 
 *note: in every case here, the (@handle) is optional, if supplied Jeeves will gift to @Handle from you.
 If not supplied, jeeves will gift to you.* 
