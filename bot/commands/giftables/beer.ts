@@ -8,7 +8,7 @@ import { GiftablesHelper } from '../common/giftables';
 
 export class BeerCommand implements aSpectrumCommand {
     public listenerID;
-    public shortCode = "beer" + GiftablesHelper.optTarget + "$";
+    public shortCode = "(?:beer|fosters)" + GiftablesHelper.optTarget + "$";
     public callback = (message?: receivedTextMessage, lobby?: SpectrumLobby, matchs?: Array<any>) => {
 
         let username = GiftablesHelper.getTarget(message, matchs);

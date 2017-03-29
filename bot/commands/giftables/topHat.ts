@@ -8,7 +8,7 @@ import { GiftablesHelper } from '../common/giftables';
 
 export class TopHatCommand implements aSpectrumCommand {
     public listenerID;
-    public shortCode = "top hat"+GiftablesHelper.optTarget+"$";
+    public shortCode = "(?:top hat|tophat)"+GiftablesHelper.optTarget+"$";
     public callback = (message?:receivedTextMessage, lobby?:SpectrumLobby, matchs?:Array<any>) => {
         
         let username = GiftablesHelper.getTarget(message,matchs);
