@@ -7,7 +7,7 @@ export class RulesCommand implements aSpectrumCommand {
     public listenerID;
     public shortCode:string = "rules( details)?$";
     public callback = (message?:receivedTextMessage, lobby?:SpectrumLobby, matchs?:Array<any>) => {
-        if(!matchs[1]) lobby.sendPlainTextMessage(`[BOT] These are the 4 fundamentals rules I obey:
+        if(!matchs[1]) lobby.sendPlainTextMessage(`[BOT] These are the 2 fundamentals rules I obey:
         1. Rµw - 1/2 Rgµw + Λgµv = 8πG/c⁴ * Tµv
         2. iħ * ∂/∂t * Ψ(r,t) = ĤΨ(r,t)
 For a more specific set of rules, please type !jeeves rules details`);
