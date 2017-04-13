@@ -49,9 +49,10 @@ If not supplied, jeeves will gift to you.*
 **commands**
 - `isup`
     Displays whether or not the bot is up and running.
-- 'rules (details)?'
+- `rules (details)?`
     Displays the rules/laws jeeves will *always* follow.
-    `!jeeves rules details` will display more specific rules.
+    
+    Note:`!jeeves rules details` will display more specific rules.
 - `when (question|release date)`
     *Where (question|release date) is a desired release date.* Will use machine learning on the spectrums/forums/reddit to try and come up with a best estimate as to when required featured will release.
     
