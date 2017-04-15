@@ -16,7 +16,7 @@ export class addSaveCommand implements aSpectrumCommand {
 
         DbSaves.insert({handle: matchs[1], time: new Date().getTime()}, () => {
             DbSaves.count({handle: matchs[1]}, (err, count) => {
-                lobby.sendPlainTextMessage("[BOT] +1 Save for @"+matchs[1]+" ("+count+" kills)");
+                lobby.sendPlainTextMessage("[BOT] +1 Save for @"+matchs[1]+" ("+count+" saves)");
                 removeSaveCommand.canRemove = true;
             });
         });
