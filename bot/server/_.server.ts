@@ -3,6 +3,7 @@ import * as express from "express";
 import { countKillCommand } from '../commands/kill/countKill';
 import { topKillsCommand } from '../commands/kill/topKills';
 import { aSpectrumCommand } from '../../spectrum-bot/src/Spectrum/interfaces/command.interface';
+import { topSavesCommand } from '../commands/save/topSaves';
 
 export class APIServer {
     protected app = express();
@@ -12,6 +13,7 @@ export class APIServer {
 
     public constructor() {
         this.app.get('/kills/top', this.topKillers);
+        this.app.get('/saves/top', this.topSavers);
         this.app.get('/isup', this.isUp);
         this.app.get('/commands', this.commandLists);
         this.app.get('/dumbStats', this.dumpStats);
@@ -20,6 +22,11 @@ export class APIServer {
     public topKillers(req, res) {
         res.header("Access-Control-Allow-Origin", "*");
         topKillsCommand.getTopCount().then((top) => res.end(JSON.stringify(top)));
+    }
+
+    public topSavers(req, res) {
+        res.header("Access-Control-Allow-Origin", "*");
+        topSavesCommand.getTopCount().then((top) => res.end(JSON.stringify(top)));
     }
 
     public isUp(req, res) {
