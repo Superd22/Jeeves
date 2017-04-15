@@ -7,13 +7,13 @@ Jeeves is butler bot for #concierge Spectrum's channel.
 
 ex: `kill add @Haverson` in this guide will be `!jeeves kill add @Haverson` on Spectrum
 
-## Chat Kills
-There is a rudimentary kill system in place to track who killed the #concierge chat and when.
+## Chat Kills & Saves
+There is a rudimentary kill system in place to track who killed the #concierge chat and when. (and who saved it)
 see : http://whokilledconcierge.com/
 
 **rules** 
 - Is presently considered a chat-kill any period of time where the chat is inactive for more than *10 minutes* after having been previously active
-- ?
+- Is presently considered a chat-save a message triggering activity after any period >5 mins without talking.
 
 **commands**
 - `kill add @Handle` 
@@ -22,6 +22,9 @@ see : http://whokilledconcierge.com/
     Displays a top-3 list of people with the most kills
 - `kill remove last`
     Remove the last added kill.
+- `save add @Handle`
+- `save top`
+- `save remove last`
 
 
 ## Giftables
