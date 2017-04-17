@@ -1,9 +1,9 @@
 import { PizzaCommand } from './giftables/pizza';
 import { isUpCommand } from './isUp/is-up';
 import { addKillCommand } from './kill/addKill';
-import { SpectrumCommands } from '../../spectrum-bot/src/Spectrum/services/commands.service';
+import { SpectrumCommands } from 'spectrum-bot/lib/Spectrum/services/commands.service';
 import * as Datastore from 'nedb';
-import { aSpectrumCommand } from '../../spectrum-bot/src/Spectrum/interfaces/command.interface';
+import { aSpectrumCommand } from 'spectrum-bot/lib/Spectrum/interfaces/command.interface';
 import { removeKillCommand } from './kill/removeKill';
 import { topKillsCommand } from './kill/topKills';
 import { coffeeCommand } from './giftables/coffee';

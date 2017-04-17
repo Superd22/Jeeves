@@ -1,7 +1,7 @@
-import { aBotCommand } from '../../../spectrum-bot/src/Spectrum/components/command.component';
-import { receivedTextMessage } from '../../../spectrum-bot/src/Spectrum/interfaces/receivedTextMessage.interface';
-import { SpectrumLobby } from '../../../spectrum-bot/src/Spectrum/components/lobby.component';
-import { aSpectrumCommand } from '../../../spectrum-bot/src/Spectrum/interfaces/command.interface';
+import { aBotCommand } from 'spectrum-bot/lib/Spectrum/components/command.component';
+import { receivedTextMessage } from 'spectrum-bot/lib/Spectrum/interfaces/receivedTextMessage.interface';
+import { SpectrumLobby } from 'spectrum-bot/lib/Spectrum/components/lobby.component';
+import { aSpectrumCommand } from 'spectrum-bot/lib/Spectrum/interfaces/command.interface';
 import { DbKills } from '../_.commands';
 
 export class removeUserKillCommand implements aSpectrumCommand {

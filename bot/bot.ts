@@ -1,4 +1,4 @@
-import { Spectrum } from '../spectrum-bot/';
+import { Spectrum } from 'spectrum-bot/lib/';
 import { config } from './config/config';
 import { JeevesCommands } from './commands/_.commands';
 import { APIServer } from './server/_.server';
