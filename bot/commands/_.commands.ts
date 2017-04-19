@@ -1,3 +1,4 @@
+import { DiceCommand } from './dice/dice';
 import { PizzaCommand } from './giftables/pizza';
 import { isUpCommand } from './isUp/is-up';
 import { addKillCommand } from './kill/addKill';
@@ -22,7 +23,7 @@ import { removeSaveCommand } from './save/removeSave';
 export class JeevesCommands {
     public static commands:aSpectrumCommand[] = [new isUpCommand(), new addKillCommand(), new removeKillCommand(), new topKillsCommand(),
     new coffeeCommand(), new StatCoffeeCommand(), new HelpCommand(), new TeaCommand(), new BeerCommand(), new WhenIsCommand(), new WineCommand(),
-    new TopHatCommand(), new PizzaCommand(), new RulesCommand(), new addSaveCommand(), new countSaveCommand(), new removeSaveCommand()];
+    new TopHatCommand(), new PizzaCommand(), new RulesCommand(), new addSaveCommand(), new countSaveCommand(), new removeSaveCommand(), new DiceCommand()];
     private scCommands:SpectrumCommands = new SpectrumCommands();
     public constructor() {
         console.log("constructing");
