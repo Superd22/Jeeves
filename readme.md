@@ -56,6 +56,9 @@ If not supplied, jeeves will gift to you.*
     Displays the rules/laws jeeves will *always* follow.
     
     Note:`!jeeves rules details` will display more specific rules.
+- `roll NdX` Rolls N dices of size X 
+
+    *1<=N<=100 (only 20 in public lobbies) & 1<=X<=100*
 - `when (question|release date)`
     *Where (question|release date) is a desired release date.* Will use machine learning on the spectrums/forums/reddit to try and come up with a best estimate as to when required featured will release.
     
