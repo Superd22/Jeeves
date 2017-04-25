@@ -20,16 +20,19 @@ import { addSaveCommand } from './save/addSave';
 import { countSaveCommand } from './save/countSave';
 import { removeSaveCommand } from './save/removeSave';
 
+import { config } from '../config/config'
+
 export class JeevesCommands {
+    // is there any better way than a static array?
     public static commands:aSpectrumCommand[] = [new isUpCommand(), new addKillCommand(), new removeKillCommand(), new topKillsCommand(),
     new coffeeCommand(), new StatCoffeeCommand(), new HelpCommand(), new TeaCommand(), new BeerCommand(), new WhenIsCommand(), new WineCommand(),
     new TopHatCommand(), new PizzaCommand(), new RulesCommand(), new addSaveCommand(), new countSaveCommand(), new removeSaveCommand(), new DiceCommand()];
     private scCommands:SpectrumCommands = new SpectrumCommands();
     public constructor() {
-        console.log("constructing");
-        this.scCommands.setPrefix("!jeeves");
+        console.log("Creating commands with prefix trigger: " + config.commandTrigger);
+        this.scCommands.setPrefix(config.commandTrigger);
         JeevesCommands.commands.forEach( command => {
-            console.log("registering");
+            console.log("registering" + command.name);
             this.scCommands.registerCommand(command);
         });
     }
