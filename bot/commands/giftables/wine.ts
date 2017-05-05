@@ -1,3 +1,4 @@
+import { SpectrumUser } from 'spectrum-bot/lib/Spectrum/components/user.component';
 import { aBotCommand } from 'spectrum-bot/lib/Spectrum/components/command.component';
 import { receivedTextMessage } from 'spectrum-bot/lib/Spectrum/interfaces/receivedTextMessage.interface';
 import { SpectrumLobby } from 'spectrum-bot/lib/Spectrum/components/lobby.component';
@@ -12,7 +13,7 @@ export class WineCommand implements aSpectrumCommand {
     public callback = (message?:receivedTextMessage, lobby?:SpectrumLobby, matchs?:Array<any>) => {
         
         let username = GiftablesHelper.getTarget(message,matchs);
-        let originalUser = message.member.displayname;
+        let originalUser = new SpectrumUser(message.member);
 
         let hasT = GiftablesHelper.hasTarget(matchs);
 
@@ -24,7 +25,7 @@ export class WineCommand implements aSpectrumCommand {
         ];
 
         lobby.sendPlainTextMessage("[BOT] "+pickRandom(messages));
-        GiftablesHelper.updateStatsForGiftable("wine",originalUser,username);
+        GiftablesHelper.updateStatsForGiftable("wine",message.member.displayname,username);
 
     };
     public name = "Serve wine";

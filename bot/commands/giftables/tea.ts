@@ -1,3 +1,4 @@
+import { SpectrumUser } from 'spectrum-bot/lib/Spectrum/components/user.component';
 import { aBotCommand } from 'spectrum-bot/lib/Spectrum/components/command.component';
 import { receivedTextMessage } from 'spectrum-bot/lib/Spectrum/interfaces/receivedTextMessage.interface';
 import { SpectrumLobby } from 'spectrum-bot/lib/Spectrum/components/lobby.component';
@@ -12,22 +13,22 @@ export class TeaCommand implements aSpectrumCommand {
     public callback = (message?:receivedTextMessage, lobby?:SpectrumLobby, matchs?:Array<any>) => {
         
         let username = GiftablesHelper.getTarget(message,matchs);
-        let originalUser = message.member.displayname;
+        let originalUser = new SpectrumUser(message.member);
 
         let hasT = GiftablesHelper.hasTarget(matchs);
 
         let messages = [
             "Certainly. Here you go "+username+" :tea: ",
-            "Earl grey, Hot. As accustomed :tea:"+( hasT ? "courtesy of "+originalUser : ""),
-            "Oh you will certainly enjoy that cup. :tea:"+ (hasT ? "Courtesy of "+originalUser : "" ),
+            "Earl grey, Hot. As accustomed :tea:"+( hasT ? "courtesy of "+originalUser.mention() : ""),
+            "Oh you will certainly enjoy that cup. :tea:"+ (hasT ? "Courtesy of "+originalUser.mention() : "" ),
             "I know you would ask and took the liberty of making some as you were away. :tea:",
-            "Here you go "+username+" :tea:"+ (hasT ? "Courtesy of "+originalUser : ""),
-            "One hot :tea: for you, dear "+username+"." + (hasT ? "Courtesy of "+originalUser : ""),
+            "Here you go "+username+" :tea:"+ (hasT ? "Courtesy of "+originalUser.mention() : ""),
+            "One hot :tea: for you, dear "+username+"." + (hasT ? "Courtesy of "+originalUser.mention() : ""),
             ":tea: Do mind the kettle "+username+" as it is quite hot..",
         ];
 
         lobby.sendPlainTextMessage("[BOT] "+pickRandom(messages));
-        GiftablesHelper.updateStatsForGiftable("tea",originalUser,username);
+        GiftablesHelper.updateStatsForGiftable("tea",message.member.displayname,username);
     };
     public name = "Serve tea";
     public manual = "Serves tea.";

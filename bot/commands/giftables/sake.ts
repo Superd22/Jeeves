@@ -7,26 +7,30 @@ import { DbStats } from '../_.commands';
 import { pickRandom } from '../common/pickRandom';
 import { GiftablesHelper } from '../common/giftables';
 
-export class PizzaCommand implements aSpectrumCommand {
+export class SakeCommand implements aSpectrumCommand {
     public listenerID;
-    public shortCode = "pizza" + GiftablesHelper.optTarget + "$";
+    public shortCode = "(?:sake|japanese stuff)" + GiftablesHelper.optTarget + "$";
     public callback = (message?: receivedTextMessage, lobby?: SpectrumLobby, matchs?: Array<any>) => {
 
         let username = GiftablesHelper.getTarget(message, matchs);
         let originalUser = new SpectrumUser(message.member);
         let hasT = GiftablesHelper.hasTarget(matchs);
+
         let messages = [
-            "I need to get it my chest : I despise <scAPIM>@Sharpe42:17313</scAPIM>. Now here is your pizza " + username,
-            ":pizza: for you " + username + (hasT ? " you can thank " + originalUser.mention() + " for that one." : ""),
-            "I studied for years in an that old Italian restaurant to learn the perfect recipe :pizza: for you " + username + (hasT ? " you can thank " + originalUser.mention() + " for that one though." : ""),
-            "It seems someone found it funny to have a *pizza* delivered here for your name " + username + "... " + (hasT ? " why do i suspect " + originalUser.mention() + " ?" : ""),
+            "What are we celebrating, if I might ask. :sake: ?",
+            "Starting early as per usual I see " + username + " . :sake:",
+            "Here you go " + username + " :sake:" + (hasT ? " courtesy " + originalUser.mention() + "." : ""),
+            "Maybe you should consider cutting on the sake dear, it's pretty heavy stuff. " + username + ". But alas" + (hasT ? " I know " + originalUser.mention() + " is pressuring you, so" : ",") + " here you go :sake:",
+            "This one's on the house! :sake:",
+            "How about this instead? :beer:",
+            "Cheers! :sake:",
         ];
 
         lobby.sendPlainTextMessage("[BOT] " + pickRandom(messages));
 
-        GiftablesHelper.updateStatsForGiftable("pizza", message.member.displayname, username);
+        GiftablesHelper.updateStatsForGiftable("sake", message.member.displayname, username);
 
     };
-    public name = "Serve pizza";
-    public manual = "Serves pizza.";
+    public name = "Serve sake";
+    public manual = "Serves sake.";
 }
