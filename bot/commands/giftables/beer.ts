@@ -1,3 +1,4 @@
+import { GiftableCommand } from './_giftable';
 import { SpectrumUser } from 'spectrum-bot/lib/Spectrum/components/user.component';
 import { aBotCommand } from 'spectrum-bot/lib/Spectrum/components/command.component';
 import { receivedTextMessage } from 'spectrum-bot/lib/Spectrum/interfaces/receivedTextMessage.interface';
@@ -7,15 +8,14 @@ import { DbStats } from '../_.commands';
 import { pickRandom } from '../common/pickRandom';
 import { GiftablesHelper } from '../common/giftables';
 
-export class BeerCommand implements aSpectrumCommand {
+export class BeerCommand extends GiftableCommand {
     public listenerID;
-    public shortCode = "(?:beer|fosters)" + GiftablesHelper.optTarget + "$";
-    public callback = (message?: receivedTextMessage, lobby?: SpectrumLobby, matchs?: Array<any>) => {
-
-        let username = GiftablesHelper.getTarget(message, matchs);
-        let originalUser = new SpectrumUser(message.member);
-        let hasT = GiftablesHelper.hasTarget(matchs);
-
+    public shortCode = "(?:beer|fosters)";
+    protected statName = "beer";
+    public constructor() {
+        super();
+    }
+    public messageToSend(originalUser: SpectrumUser, username: string, target: string, hasT: boolean) {
         let messages = [
             "What are we celebrating, if I might ask. :beers: ?",
             "Starting early as per usual I see " + username + " . :beers:",
@@ -30,11 +30,8 @@ export class BeerCommand implements aSpectrumCommand {
             "Cheers! :beers:",
         ];
 
-        lobby.sendPlainTextMessage("[BOT] " + pickRandom(messages));
-
-        GiftablesHelper.updateStatsForGiftable("beer", message.member.displayname, username);
-
-    };
+        return pickRandom(messages);
+    }
     public name = "Serve beer";
     public manual = "Serves beer.";
 }
