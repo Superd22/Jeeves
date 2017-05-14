@@ -19,9 +19,9 @@ export class WineCommand extends GiftableCommand {
     public messageToSend(originalUser: SpectrumUser, username: string, target: string, hasT: boolean) {
         let messages = [
             "Is the wine satisfactory " + username + " ? Shall I serve ? :wine_glass: ",
-            "I know you have quite a palate " + username + ". Do tell if that bottle " + (hasT ? "courtesy of " + originalUser : "" + " is satisfactory."),
-            "I took the liberty of opening a bottle of the old reserve. :wine_glass:" + (hasT ? ", courtesy of " + originalUser : ""),
-            "It is one of the finest bottle we have, enjoy " + username + (hasT ? ". Courtesy of " + originalUser + " by the way." : "."),
+            "I know you have quite a palate " + username + ". Do tell if that bottle " + (hasT ? "courtesy of " + originalUser.mention() : "" + " is satisfactory."),
+            "I took the liberty of opening a bottle of the old reserve. :wine_glass:" + (hasT ? ", courtesy of " + originalUser.mention() : ""),
+            "It is one of the finest bottle we have, enjoy " + username + (hasT ? ". Courtesy of " + originalUser.mention() + " by the way." : "."),
         ];
 
         return pickRandom(messages);
