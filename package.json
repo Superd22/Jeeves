@@ -12,6 +12,7 @@
   "devDependencies": {
     "@types/core-js": "^0.9.41",
     "@types/node": "^7.0.18",
+    "@types/nedb": "^1.8.3",
     "draft-js": "^0.10.0",
     "popsicle": "^9.1.0",
     "react": "^15.4.2",

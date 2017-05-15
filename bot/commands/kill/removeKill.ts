@@ -16,7 +16,7 @@ export class removeKillCommand implements aSpectrumCommand {
             return false;
         }
         
-        DbKills.find().sort({ time: -1 }).limit(1).exec((err, docs) => {
+        DbKills.find(null).sort({ time: -1 }).limit(1).exec((err, docs: {_id:any, handle:any}[]) => {
             let last = docs[0];
             if(last) {
                 DbKills.remove({_id: last._id}, {}, (err, numRemoved) => {
