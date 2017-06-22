@@ -23,13 +23,13 @@ export class DiceCommand implements aSpectrumCommand {
             let results = "";
 
             for (var i = 1; i <= dice_number; i++) {
-                results += "\nd" + i + ": " + (Math.floor(Math.random() * dice_number) + 1);
+                results += "\nd" + i + ": " + (Math.floor(Math.random() * dice_size) + 1);
             }
 
-            if(dice_number <= 20)
-            lobby.sendPlainTextMessage("[BOT] :game_die: Here are the results :game_die: :" + results);
-            else 
-            new SpectrumUser(message.member).sendPrivateMessage("[BOT] :game_die: Here are the results :game_die: :" + results);
+            if (dice_number <= 20)
+                lobby.sendPlainTextMessage("[BOT] :game_die: Here are the results :game_die: :" + results);
+            else
+                new SpectrumUser(message.member).sendPrivateMessage("[BOT] :game_die: Here are the results :game_die: :" + results);
         }
 
     };
