@@ -4,7 +4,7 @@ import { PizzaCommand } from './giftables/pizza';
 import { isUpCommand } from './isUp/is-up';
 import { addKillCommand } from './kill/addKill';
 import { SpectrumCommands } from 'spectrum-bot/lib/Spectrum/services/commands.service';
-import * as Datastore from 'nedb';
+import * as Nedb from 'nedb';
 import { aSpectrumCommand } from 'spectrum-bot/lib/Spectrum/interfaces/command.interface';
 import { removeKillCommand } from './kill/removeKill';
 import { topKillsCommand } from './kill/topKills';
@@ -40,6 +40,6 @@ export class JeevesCommands {
     }
 }
 
-export let DbKills:Datastore = new Datastore({ filename: './bot/db/kills.db', autoload: true });
-export let DbStats:Datastore = new Datastore({ filename: './bot/db/stats.db', autoload: true });
-export let DbSaves:Datastore = new Datastore({ filename: './bot/db/saves.db', autoload: true });
+export let DbKills:Nedb = new Nedb({ filename: './bot/db/kills.db', autoload: true });
+export let DbStats:Nedb = new Nedb({ filename: './bot/db/stats.db', autoload: true });
+export let DbSaves:Nedb = new Nedb({ filename: './bot/db/saves.db', autoload: true });

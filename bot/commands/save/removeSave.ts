@@ -16,7 +16,7 @@ export class removeSaveCommand implements aSpectrumCommand {
             return false;
         }
         
-        DbSaves.find().sort({ time: -1 }).limit(1).exec((err, docs) => {
+        DbSaves.find(null).sort({ time: -1 }).limit(1).exec((err, docs: {_id:any, handle:any}[]) => {
             let last = docs[0];
             if(last) {
                 DbSaves.remove({_id: last._id}, {}, (err, numRemoved) => {
