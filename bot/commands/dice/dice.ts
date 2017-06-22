@@ -23,7 +23,7 @@ export class DiceCommand implements aSpectrumCommand {
             let results = "";
 
             for (var i = 1; i <= dice_number; i++) {
-                results += "\nd" + i + ": " + (Math.floor(Math.random() * (dice_size - 1)) + 1);
+                results += "\nd" + i + ": " + (Math.floor(Math.random() * dice_number) + 1);
             }
 
             if(dice_number <= 20)
