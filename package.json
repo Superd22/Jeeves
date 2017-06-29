@@ -7,7 +7,7 @@
     "express": "^4.15.2",
     "nedb": "^1.8.0",
     "typescript": "^2.3.2",
-    "spectrum-bot":"Superd22/spectrum-bot"
+    "spectrum-bot":"^0.3.5-u-1"
   },
   "devDependencies": {
     "@types/core-js": "^0.9.41",
