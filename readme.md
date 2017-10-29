@@ -47,6 +47,9 @@ If not supplied, jeeves will gift to you.*
 - `beer (@Handle)`
     Opens and serves beer
 
+## ATV
+- `atv is out` check if the ATV for this week is out.
+
 ## Misc.
 
 **commands**
