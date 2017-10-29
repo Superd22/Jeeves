@@ -1,3 +1,4 @@
+import { ATVIsOutCommand } from './atv/is-out.command';
 import { SakeCommand } from './giftables/sake';
 import { DiceCommand } from './dice/dice';
 import { PizzaCommand } from './giftables/pizza';
@@ -25,21 +26,24 @@ import { config } from '../config/config'
 
 export class JeevesCommands {
     // is there any better way than a static array?
-    public static commands:aSpectrumCommand[] = [new isUpCommand(), new addKillCommand(), new removeKillCommand(), new topKillsCommand(),
-    new coffeeCommand(), new StatCoffeeCommand(), new HelpCommand(), new TeaCommand(), new BeerCommand(), new WhenIsCommand(), new WineCommand(),
-    new TopHatCommand(), new PizzaCommand(), new RulesCommand(), new addSaveCommand(), new countSaveCommand(), new removeSaveCommand(), new DiceCommand(),
-    new SakeCommand()];
-    private scCommands:SpectrumCommands = new SpectrumCommands();
+    public static commands: aSpectrumCommand[] = [
+        new isUpCommand(), new addKillCommand(), new removeKillCommand(), new topKillsCommand(),
+        new coffeeCommand(), new StatCoffeeCommand(), new HelpCommand(), new TeaCommand(), 
+        new BeerCommand(), new WhenIsCommand(), new WineCommand(), new TopHatCommand(),
+        new PizzaCommand(), new RulesCommand(), new addSaveCommand(), new countSaveCommand(), 
+        new removeSaveCommand(), new DiceCommand(), new SakeCommand(), new ATVIsOutCommand()
+    ];
+    private scCommands: SpectrumCommands = new SpectrumCommands();
     public constructor() {
         console.log("Creating commands with prefix trigger: " + config.commandTrigger);
         this.scCommands.setPrefix(config.commandTrigger);
-        JeevesCommands.commands.forEach( command => {
+        JeevesCommands.commands.forEach(command => {
             console.log("registering" + command.name);
             this.scCommands.registerCommand(command);
         });
     }
 }
 
-export let DbKills:Nedb = new Nedb({ filename: './bot/db/kills.db', autoload: true });
-export let DbStats:Nedb = new Nedb({ filename: './bot/db/stats.db', autoload: true });
-export let DbSaves:Nedb = new Nedb({ filename: './bot/db/saves.db', autoload: true });
+export let DbKills: Nedb = new Nedb({ filename: './bot/db/kills.db', autoload: true });
+export let DbStats: Nedb = new Nedb({ filename: './bot/db/stats.db', autoload: true });
+export let DbSaves: Nedb = new Nedb({ filename: './bot/db/saves.db', autoload: true });

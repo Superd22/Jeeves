@@ -11,8 +11,8 @@ bot.initAsUser(config.username, config.password).then( (isConnected) => {
 
     // Wait for internal state to be ready
     state.whenReady().then(() => {
-        var commands = new JeevesCommands(); 
-        var server = new APIServer();     
+        const commands = new JeevesCommands(); 
+        const server = new APIServer();     
 
         // Get a community
         let global = state.getCommunityByName("Star Citizen");

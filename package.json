@@ -5,14 +5,17 @@
   "main": "index.js",
   "dependencies": {
     "express": "^4.15.2",
+    "global-cache": "^1.2.1",
+    "googleapis": "^22.2.0",
     "nedb": "^1.8.0",
-    "typescript": "^2.3.2",
-    "spectrum-bot":"^0.3.5-u-1"
+    "spectrum-bot": "^1.0.0",
+    "typescript": "^2.3.2"
   },
   "devDependencies": {
     "@types/core-js": "^0.9.41",
-    "@types/node": "^7.0.18",
+    "@types/gapi": "0.0.35",
     "@types/nedb": "^1.8.3",
+    "@types/node": "^7.0.18",
     "draft-js": "^0.10.0",
     "popsicle": "^9.1.0",
     "react": "^15.4.2",

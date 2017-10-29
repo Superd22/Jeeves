@@ -5,4 +5,6 @@ export let config = {
     password:"",
     /** bot command trigger. Type this at the start of a line to access the bot */
     commandTrigger: "!jeeves",
+    /** google api key */
+    googleKey: ''
 };
