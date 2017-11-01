@@ -5,10 +5,14 @@
   "main": "index.js",
   "dependencies": {
     "express": "^4.15.2",
+    "glob": "^7.1.2",
     "global-cache": "^1.2.1",
     "googleapis": "^22.2.0",
     "nedb": "^1.8.0",
-    "spectrum-bot": "^1.0.0",
+    "reflect-metadata": "^0.1.10",
+    "rss-parser": "^2.10.8",
+    "spectrum-bot": "^1.1.0",
+    "typedi": "^0.5.2",
     "typescript": "^2.3.2"
   },
   "devDependencies": {

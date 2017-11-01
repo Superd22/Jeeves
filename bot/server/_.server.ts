@@ -7,7 +7,7 @@ import { topSavesCommand } from '../commands/save/topSaves';
 
 export class APIServer {
     protected app = express();
-    protected server = this.app.listen(18103, () => {
+    protected server = this.app.listen(1815, () => {
         console.log("SERVER OK");
     });
 
