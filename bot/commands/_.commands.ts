@@ -23,6 +23,7 @@ import { countSaveCommand } from './save/countSave';
 import { removeSaveCommand } from './save/removeSave';
 
 import { config } from '../config/config'
+import { MOTDCommand } from './motd/motd.command';
 
 export class JeevesCommands {
     // is there any better way than a static array?
@@ -31,7 +32,8 @@ export class JeevesCommands {
         new coffeeCommand(), new StatCoffeeCommand(), new HelpCommand(), new TeaCommand(), 
         new BeerCommand(), new WhenIsCommand(), new WineCommand(), new TopHatCommand(),
         new PizzaCommand(), new RulesCommand(), new addSaveCommand(), new countSaveCommand(), 
-        new removeSaveCommand(), new DiceCommand(), new SakeCommand(), new ATVIsOutCommand()
+        new removeSaveCommand(), new DiceCommand(), new SakeCommand(), new ATVIsOutCommand(),
+        new MOTDCommand()
     ];
     private scCommands: SpectrumCommands = new SpectrumCommands();
     public constructor() {

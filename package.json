@@ -11,8 +11,9 @@
     "nedb": "^1.8.0",
     "reflect-metadata": "^0.1.10",
     "rss-parser": "^2.10.8",
-    "spectrum-bot": "^1.1.0",
+    "spectrum-bot": "^1.1.2",
     "typedi": "^0.5.2",
+    "draft-js": "^0.10.0",
     "typescript": "^2.3.2"
   },
   "devDependencies": {
