@@ -50,6 +50,11 @@ If not supplied, jeeves will gift to you.*
 ## ATV
 - `atv is out` check if the ATV for this week is out.
 
+## MOTD
+staff/admins/mods as well as a select few people can set the Message Of The Day for concierge.
+- `motd set [breakline]` set the motd to whatever is after the line break
+- `motd` display the current motd
+
 ## Misc.
 
 **commands**
