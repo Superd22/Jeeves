@@ -18,7 +18,7 @@ export class coffeeCommand extends GiftableCommand implements aSpectrumCommand {
     }
     public messageToSend(originalUser: SpectrumUser, username: string, target: string, hasT: boolean) {
         let messages = [
-            "Certainly, would you like some suggar " + username + " :coffee: ?",
+            "Certainly, would you like some sugar " + username + " :coffee: ?",
             "On my way " + username + " :coffee:, black as usual I assume ?",
             "I have it ready just the way you like " + username + ". :coffee:",
             "I know you would ask and took the liberty of making some as you were away. :coffee:",
