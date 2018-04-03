@@ -42,6 +42,8 @@ If not supplied, jeeves will gift to you.*
     Brews and brings tea
 - `coffee (@Handle)`
     Warms and brings coffee
+- `coffeemate (@Handle)`
+    Enhances coffee with a creamer
 - `wine (@Handle)`
     Selects and serves wine
 - `beer (@Handle)`
