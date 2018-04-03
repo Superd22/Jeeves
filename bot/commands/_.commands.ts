@@ -10,7 +10,7 @@ import { aSpectrumCommand } from 'spectrum-bot/lib/';
 import { removeKillCommand } from './kill/removeKill';
 import { topKillsCommand } from './kill/topKills';
 import { coffeeCommand } from './giftables/coffee';
-import { coffemateCommand } from './giftables/coffeemate';
+import { coffeemateCommand } from './giftables/coffeemate';
 import { StatCoffeeCommand } from './giftables/statCoffee';
 import { HelpCommand } from './help/help';
 import { TeaCommand } from './giftables/tea';
