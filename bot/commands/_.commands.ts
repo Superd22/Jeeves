@@ -10,6 +10,7 @@ import { aSpectrumCommand } from 'spectrum-bot/lib/';
 import { removeKillCommand } from './kill/removeKill';
 import { topKillsCommand } from './kill/topKills';
 import { coffeeCommand } from './giftables/coffee';
+import { coffemateCommand } from './giftables/coffeemate';
 import { StatCoffeeCommand } from './giftables/statCoffee';
 import { HelpCommand } from './help/help';
 import { TeaCommand } from './giftables/tea';
@@ -29,7 +30,7 @@ export class JeevesCommands {
     // is there any better way than a static array?
     public static commands: aSpectrumCommand[] = [
         new isUpCommand(), new addKillCommand(), new removeKillCommand(), new topKillsCommand(),
-        new coffeeCommand(), new StatCoffeeCommand(), new HelpCommand(), new TeaCommand(), 
+        new coffeeCommand(), new coffeemateCommand(), new StatCoffeeCommand(), new HelpCommand(), new TeaCommand(), 
         new BeerCommand(), new WhenIsCommand(), new WineCommand(), new TopHatCommand(),
         new PizzaCommand(), new RulesCommand(), new addSaveCommand(), new countSaveCommand(), 
         new removeSaveCommand(), new DiceCommand(), new SakeCommand(), new ATVIsOutCommand(),
