@@ -4,6 +4,7 @@
   "description": "(very secretive)",
   "main": "index.js",
   "dependencies": {
+    "draft-js": "^0.10.0",
     "express": "^4.15.2",
     "glob": "^7.1.2",
     "global-cache": "^1.2.1",
@@ -13,7 +14,6 @@
     "rss-parser": "^2.10.8",
     "spectrum-bot": "^1.1.2",
     "typedi": "^0.5.2",
-    "draft-js": "^0.10.0",
     "typescript": "^2.3.2"
   },
   "devDependencies": {
