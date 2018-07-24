@@ -1,5 +1,5 @@
 import { DbStats } from './../_.commands';
-import { receivedTextMessage } from 'spectrum-bot/lib/';
+import { receivedTextMessage } from 'spectrum-bot';
 export class GiftablesHelper {
     /** The regex for optional target for a giftable */
     public static optTarget = "( @[^ ]+)?[ ]*";

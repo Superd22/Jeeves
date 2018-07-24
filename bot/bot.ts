@@ -1,5 +1,5 @@
 import { JeevesTasksService } from './tasks/common/tasks.service';
-import { Spectrum } from 'spectrum-bot/lib/';
+import { Spectrum } from 'spectrum-bot';
 import { config } from './config/config';
 import { JeevesCommands } from './commands/_.commands';
 import { APIServer } from './server/_.server';

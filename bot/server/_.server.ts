@@ -2,7 +2,7 @@ import { JeevesCommands, DbStats } from './../commands/_.commands';
 import * as express from "express";
 import { countKillCommand } from '../commands/kill/countKill';
 import { topKillsCommand } from '../commands/kill/topKills';
-import { aSpectrumCommand } from 'spectrum-bot/lib/';
+import { aSpectrumCommand } from 'spectrum-bot';
 import { topSavesCommand } from '../commands/save/topSaves';
 
 export class APIServer {

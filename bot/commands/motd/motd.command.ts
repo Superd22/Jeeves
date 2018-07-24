@@ -1,8 +1,8 @@
-import { aBotCommand, defaultStarCitizenRoles } from 'spectrum-bot/lib/';
-import { receivedTextMessage } from 'spectrum-bot/lib/';
-import { SpectrumLobby } from 'spectrum-bot/lib/';
-import { aSpectrumCommand } from 'spectrum-bot/lib/';
-import { ISpectrumDraftJSRichText } from 'spectrum-bot/lib/';
+import { aBotCommand, defaultStarCitizenRoles } from 'spectrum-bot';
+import { receivedTextMessage } from 'spectrum-bot';
+import { SpectrumLobby } from 'spectrum-bot';
+import { aSpectrumCommand } from 'spectrum-bot';
+import { ISpectrumDraftJSRichText } from 'spectrum-bot';
 import { convertFromRaw, convertToRaw } from 'draft-js';
 
 export class MOTDCommand implements aSpectrumCommand {

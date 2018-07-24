@@ -1,4 +1,4 @@
-import { SpectrumLobby } from 'spectrum-bot/lib/';
+import { SpectrumLobby } from 'spectrum-bot';
 import { pickRandom } from './../../../commands/common/pickRandom';
 import { Container } from 'typedi';
 import { IJeevesTask } from '../../common/interfaces/task.interface';

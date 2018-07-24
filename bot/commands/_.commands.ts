@@ -6,7 +6,7 @@ import { isUpCommand } from './isUp/is-up';
 import { addKillCommand } from './kill/addKill';
 import { SpectrumCommands } from 'spectrum-bot/lib/';
 import * as Nedb from 'nedb';
-import { aSpectrumCommand } from 'spectrum-bot/lib/';
+import { aSpectrumCommand } from 'spectrum-bot';
 import { removeKillCommand } from './kill/removeKill';
 import { topKillsCommand } from './kill/topKills';
 import { coffeeCommand } from './giftables/coffee';

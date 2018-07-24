@@ -1,6 +1,6 @@
 import { pickRandom } from './../common/pickRandom';
-import { receivedTextMessage, SpectrumLobby, aSpectrumCommand } from 'spectrum-bot/lib/';
-import * as Google from 'googleapis';
+import { receivedTextMessage, SpectrumLobby, aSpectrumCommand } from 'spectrum-bot';
+const Google  = require('googleapis');
 import { config } from '../../config/config';
 import * as Cache from 'global-cache';
 

@@ -1,12 +1,6 @@
 import { GiftableCommand } from './_giftable';
-import { SpectrumUser } from 'spectrum-bot/lib/Spectrum/components/shared/user.component';
-import { aBotCommand } from 'spectrum-bot/lib/';
-import { receivedTextMessage } from 'spectrum-bot/lib/';
-import { SpectrumLobby } from 'spectrum-bot/lib/';
-import { aSpectrumCommand } from 'spectrum-bot/lib/';
-import { DbStats } from '../_.commands';
+import { SpectrumUser } from 'spectrum-bot';
 import { pickRandom } from '../common/pickRandom';
-import { GiftablesHelper } from '../common/giftables';
 
 export class SakeCommand extends GiftableCommand {
     public listenerID;

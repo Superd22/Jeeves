@@ -1,8 +1,8 @@
-import { aBotCommand } from 'spectrum-bot/lib/';
-import { receivedTextMessage } from 'spectrum-bot/lib/';
-import { SpectrumLobby } from 'spectrum-bot/lib/';
-import { SpectrumUser } from 'spectrum-bot/lib/';
-import { aSpectrumCommand } from 'spectrum-bot/lib/';
+import { aBotCommand } from 'spectrum-bot';
+import { receivedTextMessage } from 'spectrum-bot';
+import { SpectrumLobby } from 'spectrum-bot';
+import { SpectrumUser } from 'spectrum-bot';
+import { aSpectrumCommand } from 'spectrum-bot';
 
 export class DiceCommand implements aSpectrumCommand {
     public listenerID;
