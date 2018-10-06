@@ -8,21 +8,20 @@ import { removeKillCommand } from './removeKill';
 export class addKillCommand implements aSpectrumCommand {
     public listenerID;
     public shortCode = "kill add @([^ ]*)";
-    public callback = (message?:receivedTextMessage, lobby?:SpectrumLobby, matchs?:Array<any>) => {
-        if(!matchs[1]) matchs[1] = message.member.nickname.toLowerCase();
+    public callback = (message?: receivedTextMessage, lobby?: SpectrumLobby, matchs?: Array<string>) => {
+        if (!matchs[1]) matchs[1] = message.member.nickname.toLowerCase();
 
         // Trim spaces in handle name
         matchs[1] = matchs[1].replace(" ", "").trim();
 
-        if(matches[1] == "@azaral")
-        {
+        if (matchs[1].indexOf("azaral") > -1 && Math.random() > 0.3) {
             lobby.sendPlainTextMessage("[BOT] Sorry @azaral, you have cheated too many times.");
             return;
         }
-    
-        DbKills.insert({handle: matchs[1], time: new Date().getTime()}, () => {
-            DbKills.count({handle: matchs[1]}, (err, count) => {
-                lobby.sendPlainTextMessage("[BOT] +1 Kill for @"+matchs[1]+" ("+count+" kills)");
+
+        DbKills.insert({ handle: matchs[1], time: new Date().getTime() }, () => {
+            DbKills.count({ handle: matchs[1] }, (err, count) => {
+                lobby.sendPlainTextMessage("[BOT] +1 Kill for @" + matchs[1] + " (" + count + " kills)");
                 removeKillCommand.canRemove = true;
             });
         });
