@@ -14,7 +14,7 @@ export class addKillCommand implements aSpectrumCommand {
         // Trim spaces in handle name
         matchs[1] = matchs[1].replace(" ", "").trim();
 
-        if (matchs[1].indexOf("azaral") > -1 && Math.random() > 0.3) {
+        if (matchs[1].toLowerCase().indexOf("azaral") > -1 && Math.random() > 0.3) {
             lobby.sendPlainTextMessage("[BOT] Sorry @azaral, you have cheated too many times.");
             return;
         }
