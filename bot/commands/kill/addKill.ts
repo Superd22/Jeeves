@@ -14,6 +14,12 @@ export class addKillCommand implements aSpectrumCommand {
         // Trim spaces in handle name
         matchs[1] = matchs[1].replace(" ", "").trim();
 
+        if(matches[1] == "@azaral")
+        {
+            lobby.sendPlainTextMessage("[BOT] Sorry @azaral, you have cheated too many times.");
+            return;
+        }
+    
         DbKills.insert({handle: matchs[1], time: new Date().getTime()}, () => {
             DbKills.count({handle: matchs[1]}, (err, count) => {
                 lobby.sendPlainTextMessage("[BOT] +1 Kill for @"+matchs[1]+" ("+count+" kills)");
